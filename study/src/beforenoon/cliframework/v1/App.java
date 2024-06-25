@@ -58,7 +58,30 @@ public class App {
     public void executeCommand (int selectNo) {
         if (selectNo == 1) {
             getStudentNum();
+        } else if (selectNo == 2) {
+            getScores();
+        } else if (selectNo == 3) {
+            printScore();
+        } else if (selectNo == 4) {
+            analize();
+        } else if (selectNo == 5) {
+            exit();
         }
+    }
+
+    public void run(){
+        while (run) {
+            printMenu();
+            int select = getSelect();
+            executeCommand(select);
+        }
+
+        System.out.println("프로그램 종료");
+    }
+
+    public static void main(String[] args) {
+        App app = new App();
+        app.run();
     }
 }
 
