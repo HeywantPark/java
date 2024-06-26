@@ -1,0 +1,12 @@
+package afternoon.abstractt;
+
+public class Dog extends AbstractAnimal {
+    @Override
+    public void sound() {
+        System.out.println("강아지는 멍멍");
+    }
+    @Override
+    public void eat() {
+        System.out.println("강아지는 사료 냠냠");
+    }
+}

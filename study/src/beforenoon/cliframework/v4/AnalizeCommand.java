@@ -1,4 +1,4 @@
-package beforenoon.cliframework.v3;
+package beforenoon.cliframework.v4;
 
 public class AnalizeCommand implements Command {
     StudentScores studentScores = StudentScores.getInstance();
