@@ -10,11 +10,11 @@ public class Outer {
 
         public void print() {
             //클래스 내부의 static 에 접근
-            System.out.println("nestedStatic" + nestedStatic);
-            System.out.println("outerStatic" + outerStatic);
+            System.out.println("nestedStatic = " + nestedStatic);
+            System.out.println("outerStatic = " + outerStatic);
 
             //클래스 내부의 non-static(인스턴트) 에 접근
-            System.out.println("nestedInstance" + nestedInstance);
+            System.out.println("nestedInstance = " + nestedInstance);
 //            System.out.println("outerInstance" + outerInstance); 외부의 Instance 접근 불가
         }
     }
