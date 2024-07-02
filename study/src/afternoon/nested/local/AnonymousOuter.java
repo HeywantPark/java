@@ -1,14 +1,15 @@
 package afternoon.nested.local;
 
-public class LocalOuter {
+public class AnonymousOuter {
     private String outerInstance = "outerInstance";
 
     public void outerMethod(String methodParameter) {
         String methodString = "methodString";
 
-        class LocalInner {
+       Print print = new Print() {
             String localInstance ="localInstance";
 
+            @Override
             public void printLocal() {
                 System.out.println("localInstance = " + localInstance);
                 System.out.println("outerInstance = " + outerInstance);
@@ -16,13 +17,12 @@ public class LocalOuter {
                 System.out.println("methodParameter = " + methodParameter);
 
             }
-        }
-        LocalInner localInner = new LocalInner();
-        localInner.printLocal();
+        };
+        print.printLocal();
     }
 
     public static void main(String[] args) {
-        LocalOuter localOuter = new LocalOuter();
-        localOuter.outerMethod("methodParameter");
+        AnonymousOuter anoymousOuter = new AnonymousOuter();
+        anoymousOuter.outerMethod("methodParameter");
     }
 }
