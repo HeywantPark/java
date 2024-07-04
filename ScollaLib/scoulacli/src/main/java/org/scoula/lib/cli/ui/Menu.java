@@ -4,6 +4,8 @@ import org.scoula.lib.cli.command.Command;
 
 public class Menu {
     MenuItem[] menus;
+    private int ix = 0;
+    private int size;
 
     public Menu() {
         menus = new MenuItem[size];
