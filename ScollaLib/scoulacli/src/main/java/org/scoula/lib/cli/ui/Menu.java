@@ -22,8 +22,13 @@ public class Menu {
         System.out.println();
         System.out.println("------------------------------------------");
     }
-    public Command getSelect(){
-        int selectNo = Input.getInt("선택 >");
-        return (Command) menus[selectNo-1].getCommand();
+    public Command getSelect() throws Exception{
+        try {
+            int selectNo = Input.getInt("선택 >");
+            return (Command) menus[selectNo-1].getCommand();
+        } catch (Exception e) {
+            throw new Exception();
+        }
+
     }
 }
